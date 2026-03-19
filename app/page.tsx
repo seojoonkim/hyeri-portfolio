@@ -667,9 +667,9 @@ export default function Home() {
     <>
       {/* ─── NAVBAR ─── */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? 'bg-white/90 backdrop-blur-xl' : 'bg-transparent'
+        scrolled ? 'bg-white/80 backdrop-blur-md' : 'bg-transparent'
       }`}>
-        <div className="container flex items-center justify-between h-16 md:h-20" style={{paddingLeft:'16px', paddingRight:'16px'}}>
+        <div className="container flex items-center justify-between h-[58px] md:h-[72px]" style={{paddingLeft:'16px', paddingRight:'16px'}}>
           {/* Logo */}
           <a href="#" style={{display:'flex', alignItems:'center', height:'32px', textDecoration:'none'}}>
             <span style={{
