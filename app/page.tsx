@@ -653,8 +653,20 @@ export default function Home() {
       }`}>
         <div className="container flex items-center justify-between h-16 md:h-20" style={{paddingLeft:'16px', paddingRight:'16px'}}>
           {/* Logo */}
-          <a href="#" className="font-heading text-[11px] tracking-[0.2em] uppercase font-medium" style={{color: scrolled ? '#0A0A0A' : '#fff', transition:'color 0.3s'}}>
-            THE HEART OF MATTER
+          <a href="#" style={{display:'flex', alignItems:'center', height:'32px'}}>
+            <Image
+              src="/images/thom-logo.png"
+              alt="THE HEART OF MATTER"
+              width={100}
+              height={55}
+              style={{
+                objectFit:'contain',
+                height:'28px',
+                width:'auto',
+                filter: scrolled ? 'brightness(0)' : 'brightness(0) invert(1)',
+                transition:'filter 0.3s',
+              }}
+            />
           </a>
 
           {/* Desktop nav */}
@@ -718,9 +730,10 @@ export default function Home() {
           gap: '36px',
         }}>
           {/* 로고 */}
-          <p style={{position:'absolute', top:'20px', left:'20px', fontFamily:'var(--font-heading)', fontSize:'11px', letterSpacing:'0.18em', color:'#0A0A0A', fontWeight:500, textTransform:'uppercase'}}>
-            THE HEART OF MATTER
-          </p>
+          <div style={{position:'absolute', top:'20px', left:'20px'}}>
+            <Image src="/images/thom-logo.png" alt="THE HEART OF MATTER" width={80} height={44}
+              style={{objectFit:'contain', height:'24px', width:'auto', filter:'brightness(0)'}} />
+          </div>
           {/* 닫기 버튼 */}
           <button
             onClick={() => setMobileMenuOpen(false)}
