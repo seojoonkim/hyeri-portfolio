@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Chiron_Hei_HK, DM_Serif_Display, Outfit, Comfortaa, Asta_Sans } from "next/font/google";
+import { Chiron_Hei_HK, DM_Serif_Display, Outfit, Syne, Asta_Sans } from "next/font/google";
 import "./globals.css";
 
 const dmSans = Chiron_Hei_HK({
