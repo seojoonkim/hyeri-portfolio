@@ -723,24 +723,24 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16">
             {/* Left column */}
             <div className="md:col-span-4 fade-up">
-              <p className="label label-accent mb-4">Creative Director</p>
-              <h2 className="heading text-4xl md:text-6xl mb-3">{t.designerName}</h2>
-              <p className="body-text mt-2">{t.designerTitle}</p>
+              <p className="label label-accent">Creative Director</p>
+              <h2 className="heading text-4xl md:text-6xl" style={{marginBottom: '12px'}}>{t.designerName}</h2>
+              <p style={{fontSize: '14px', color: '#888', letterSpacing: '0.02em', marginTop: '8px'}}>{t.designerTitle}</p>
             </div>
 
             {/* Right column — bio */}
             <div className="md:col-span-8 fade-up stagger-1">
-              <div className="space-y-5 max-w-2xl">
-                <p className="body-text text-[#0A0A0A] font-light">{t.designerBio1}</p>
-                <p className="body-text">{t.designerBio2}</p>
-                <p className="body-text">{t.designerBio3}</p>
-                <p className="pull-quote text-lg md:text-xl text-[#0A0A0A] mt-8">{t.designerBio4}</p>
+              <div className="max-w-2xl" style={{display:'flex', flexDirection:'column', gap:'20px'}}>
+                <p className="body-text" style={{fontSize:'16px', lineHeight:'1.9', color:'#333', fontWeight:'300'}}>{t.designerBio1}</p>
+                <p className="body-text" style={{fontSize:'16px', lineHeight:'1.9', color:'#444', fontWeight:'300'}}>{t.designerBio2}</p>
+                <p className="body-text" style={{fontSize:'16px', lineHeight:'1.9', color:'#444', fontWeight:'300'}}>{t.designerBio3}</p>
+                <p className="pull-quote" style={{fontSize:'17px', lineHeight:'1.8', color:'#0A0A0A', fontWeight:'500', fontStyle:'italic', marginTop:'12px', paddingTop:'20px', borderTop:'1px solid #EBEBEB'}}>{t.designerBio4}</p>
               </div>
             </div>
           </div>
 
           {/* Tags */}
-          <div className="mt-10 md:mt-16 flex flex-wrap gap-2 fade-up stagger-2">
+          <div className="tag-group fade-up stagger-2">
             {designerTags.map(tag => (
               <span key={tag} className="tag">{tag}</span>
             ))}
