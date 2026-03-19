@@ -673,7 +673,7 @@ export default function Home() {
           {/* Logo */}
           <a href="#" style={{display:'flex', alignItems:'center', height:'32px', textDecoration:'none'}}>
             <span style={{
-              fontFamily:'var(--font-comfortaa), sans-serif',
+              fontFamily:'var(--font-comfortaa), Noto Sans KR, sans-serif',
               fontWeight:700,
               fontSize:'var(--fs-2)',
               letterSpacing:'0.12em',
@@ -751,7 +751,7 @@ export default function Home() {
           {/* 로고 — nav와 동일하게 */}
           <div style={{position:'absolute', top:'20px', left:'16px'}}>
             <span style={{
-              fontFamily:'var(--font-comfortaa), sans-serif',
+              fontFamily:'var(--font-comfortaa), Noto Sans KR, sans-serif',
               fontWeight:700,
               fontSize:'var(--fs-2)',
               letterSpacing:'0.12em',
@@ -773,7 +773,7 @@ export default function Home() {
           {/* 메뉴 링크 */}
           {navLinks.map(link => (
             <a key={link.label} href={link.href} onClick={() => setMobileMenuOpen(false)}
-              style={{fontFamily:'var(--font-comfortaa), sans-serif', fontSize:'var(--fs-4)', letterSpacing:'0.05em', color:'#0A0A0A', textDecoration:'none', fontWeight:700, lineHeight:1, textTransform:'uppercase'}}>
+              style={{fontFamily:'var(--font-comfortaa), Noto Sans KR, sans-serif', fontSize:'var(--fs-4)', letterSpacing:'0.05em', color:'#0A0A0A', textDecoration:'none', fontWeight:700, lineHeight:1, textTransform:'uppercase'}}>
               {link.label}
             </a>
           ))}
@@ -863,9 +863,9 @@ export default function Home() {
             <span className="hero-text-wrap">
               <span className="hero-heart-gradient" style={{
                 display:'block',
-                fontFamily:'var(--font-comfortaa), sans-serif',
+                fontFamily:'var(--font-comfortaa), Noto Sans KR, sans-serif',
                 fontStyle:'normal',
-                fontWeight:400,
+                fontWeight:900,
                 fontSize:'var(--fs-7)',
                 lineHeight:1.0,
                 letterSpacing:'0.02em',
@@ -876,9 +876,9 @@ export default function Home() {
             </span>
             <span className="hero-text-wrap">
               <span className="hero-text-inner" style={{
-                fontFamily:'var(--font-comfortaa), sans-serif',
+                fontFamily:'var(--font-comfortaa), Noto Sans KR, sans-serif',
                 fontStyle:'normal',
-                fontWeight:400,
+                fontWeight:900,
                 fontSize:'var(--fs-7)',
                 lineHeight:1.0,
                 letterSpacing:'0.06em',

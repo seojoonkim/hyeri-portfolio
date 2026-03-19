@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Chiron_Hei_HK, DM_Serif_Display, Outfit, Syne, Asta_Sans } from "next/font/google";
+import { Chiron_Hei_HK, DM_Serif_Display, Outfit, Syne, Noto_Sans_KR } from "next/font/google";
 import "./globals.css";
 
 const dmSans = Chiron_Hei_HK({
@@ -21,10 +21,10 @@ const dmSerif = DM_Serif_Display({
   style: ["normal", "italic"],
 });
 
-const comfortaa = Asta_Sans({
+const comfortaa = Noto_Sans_KR({
   subsets: ["latin"],
   variable: "--font-comfortaa",
-  weight: ["400"],
+  weight: ["700", "900"],
   style: ["normal"],
 });
 
