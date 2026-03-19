@@ -567,6 +567,7 @@ const designerTags = [
 const navLinks = [
   { label: "About", href: "#about" },
   { label: "Work", href: "#work" },
+  { label: "Vision", href: "#vision" },
   { label: "Services", href: "#services" },
   { label: "Process", href: "#process" },
   { label: "Contact", href: "#contact" },
@@ -580,6 +581,45 @@ export default function Home() {
   const [lang, setLang] = useState<Lang>('ko')
 
   const t = content[lang]
+
+  const visionStatement: Record<Lang, string> = {
+    ko: '다음 챕터는\n지금 쓰여지고 있습니다.',
+    en: 'The next chapter\nis being written.',
+    ja: '次の章は\n今まさに書かれています。',
+  }
+
+  const visionDesc: Record<Lang, string> = {
+    ko: 'K-pop의 비주얼 문법을 설계해온 THE HEART OF MATTER는 이제 그 언어를 더 넓은 세계로 가져갑니다. 럭셔리 패션, 게임, 글로벌 문화 브랜딩 — 아티스트의 정체성을 시각 언어로 번역하는 방법론은 어떤 경계도 넘습니다.',
+    en: 'THE HEART OF MATTER has spent years building the visual grammar of K-pop. Now, that language is ready for a wider world — luxury fashion, gaming, global cultural branding. The methodology that translates identity into image knows no borders.',
+    ja: 'THE HEART OF MATTERはK-popのビジュアル文法を設計してきました。今、その言語はより広い世界へと向かいます。ラグジュアリーファッション、ゲーム、グローバル文化ブランディング — アイデンティティを視覚言語に翻訳する手法に、境界はありません。',
+  }
+
+  const visionAreas: Record<Lang, { title: string; desc: string }[]> = {
+    ko: [
+      { title: 'Luxury × K-pop', desc: '글로벌 럭셔리 하우스와 K-pop 아티스트가 만나는 교차점을 설계합니다. 아티스트의 세계관과 브랜드 헤리티지 사이의 번역자.' },
+      { title: 'Gaming & Metaverse', desc: '게임과 버추얼 IP의 세계관 설계에 K-pop의 팬덤 드리븐 비주얼 전략을 이식합니다. 스크린 너머의 감정을 설계하는 일.' },
+      { title: 'Thought Leadership', desc: '\'K-pop이 브랜드를 만드는 법\'을 세계와 나눕니다. 강연, 글, 케이스 스터디를 통해 크리에이티브 디렉션의 새로운 언어를 제안.' },
+      { title: 'AI-Augmented Direction', desc: 'AI가 실행하는 시대, 무엇을 만들지 결정하는 것이 진짜 크리에이티브입니다. AI 프로토타이핑과 인간 서사의 결합을 탐구합니다.' },
+      { title: 'Global Cultural Branding', desc: '국가 브랜딩, 문화 외교, 대형 공연의 아트 디렉션. K-culture가 국가 자산이 된 시대의 크리에이티브 파트너.' },
+      { title: 'New Artist IP', desc: '차세대 아티스트의 비주얼 DNA를 초기부터 설계합니다. 데뷔 이전부터 팬의 기억에 새겨지는 세계관.' },
+    ],
+    en: [
+      { title: 'Luxury × K-pop', desc: 'Designing the intersection where global luxury houses meet K-pop artists. Translator between an artist\'s universe and a brand\'s heritage.' },
+      { title: 'Gaming & Metaverse', desc: 'Transplanting K-pop\'s fandom-driven visual strategy into gaming and virtual IP worldbuilding. Designing emotion beyond the screen.' },
+      { title: 'Thought Leadership', desc: 'Sharing \'how K-pop builds brands\' with the world. Proposing a new language for creative direction through talks, writing, and case studies.' },
+      { title: 'AI-Augmented Direction', desc: 'In an age when AI executes, deciding what to make is the real creative act. Exploring the fusion of AI prototyping and human narrative.' },
+      { title: 'Global Cultural Branding', desc: 'Art direction for national branding, cultural diplomacy, and large-scale performances. Creative partner for an era when K-culture has become national capital.' },
+      { title: 'New Artist IP', desc: 'Designing the visual DNA of next-generation artists from the very beginning. A universe imprinted on fans\' memories before debut.' },
+    ],
+    ja: [
+      { title: 'Luxury × K-pop', desc: 'グローバルラグジュアリーハウスとK-popアーティストが出会う交差点を設計します。アーティストの世界観とブランドの歴史の間の翻訳者。' },
+      { title: 'Gaming & Metaverse', desc: 'K-popのファンダム主導のビジュアル戦略をゲームとバーチャルIPの世界観設計に移植します。スクリーンを超えた感情を設計すること。' },
+      { title: 'Thought Leadership', desc: '「K-popがブランドを作る方法」を世界と共有します。講演、執筆、ケーススタディを通じてクリエイティブ・ディレクションの新しい言語を提案。' },
+      { title: 'AI-Augmented Direction', desc: 'AIが実行する時代、何を作るかを決めることが本当のクリエイティブです。AIプロトタイピングと人間のナラティブの融合を探求します。' },
+      { title: 'Global Cultural Branding', desc: '国家ブランディング、文化外交、大規模公演のアートディレクション。K-cultureが国家資産となった時代のクリエイティブパートナー。' },
+      { title: 'New Artist IP', desc: '次世代アーティストのビジュアルDNAを初期から設計します。デビュー前からファンの記憶に刻まれる世界観。' },
+    ],
+  }
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50)
@@ -912,6 +952,49 @@ export default function Home() {
                     </div>
                   </div>
                 )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── VISION ─── */}
+      <section id="vision" className="section" style={{borderTop:'1px solid #EBEBEB'}}>
+        <div className="container">
+          {/* Vision Statement */}
+          <div className="rule-dark mb-16 md:mb-20" />
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 mb-20 md:mb-32 fade-up">
+            <div className="md:col-span-2">
+              <p className="label label-accent">Vision</p>
+            </div>
+            <div className="md:col-span-10">
+              <h2 className="display" style={{
+                fontFamily:'var(--font-display)',
+                fontStyle:'italic',
+                fontSize:'clamp(2.5rem, 7vw, 6rem)',
+                lineHeight:0.95,
+                letterSpacing:'-0.02em',
+                color:'#0A0A0A',
+                marginBottom:'40px',
+                whiteSpace:'pre-line'
+              }}>{visionStatement[lang]}</h2>
+              <p className="body-text" style={{fontSize:'16px', lineHeight:'1.9', maxWidth:'680px'}}>{visionDesc[lang]}</p>
+            </div>
+          </div>
+
+          {/* Interest Areas */}
+          <div className="rule mb-12 md:mb-16" />
+          <div className="mb-12 fade-up">
+            <p className="label">Expanding Horizons</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-0 fade-up stagger-1">
+            {visionAreas[lang].map((area, idx) => (
+              <div key={area.title} className="border-t border-[#E8E8E8] pt-8 pb-12 md:pr-16">
+                <div className="flex items-center gap-4 mb-6">
+                  <span className="project-num">{String(idx + 1).padStart(2, '0')}</span>
+                </div>
+                <h3 className="heading" style={{fontSize:'clamp(1.1rem, 2.5vw, 1.5rem)', marginBottom:'16px', letterSpacing:'-0.01em'}}>{area.title}</h3>
+                <p className="body-text" style={{fontSize:'15px', lineHeight:'1.8'}}>{area.desc}</p>
               </div>
             ))}
           </div>
