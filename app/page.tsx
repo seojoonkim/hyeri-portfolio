@@ -673,7 +673,7 @@ export default function Home() {
           {/* Logo */}
           <a href="#" style={{display:'flex', alignItems:'center', height:'32px'}}>
             <Image
-              src="/images/thom-logo.png"
+              src={scrolled ? '/images/thom-logo.png' : '/images/thom-logo-white.png'}
               alt="THE HEART OF MATTER"
               width={100}
               height={55}
@@ -681,8 +681,7 @@ export default function Home() {
                 objectFit:'contain',
                 height:'25px',
                 width:'auto',
-                filter: scrolled ? 'none' : 'brightness(0) invert(1)',
-                transition:'filter 0.3s',
+                transition:'opacity 0.3s',
               }}
             />
           </a>
@@ -750,7 +749,7 @@ export default function Home() {
           {/* 로고 */}
           <div style={{position:'absolute', top:'20px', left:'20px'}}>
             <Image src="/images/thom-logo.png" alt="THE HEART OF MATTER" width={80} height={44}
-              style={{objectFit:'contain', height:'21px', width:'auto', filter:'brightness(0)'}} />
+              style={{objectFit:'contain', height:'21px', width:'auto'}} />
           </div>
           {/* 닫기 버튼 */}
           <button
