@@ -79,12 +79,12 @@ body {
   line-height: 1.05;
 }
 
-/* ─── Impact heading (Hero — Barlow Condensed 800) ─── */
+/* ─── Impact heading (Hero/Section — Nunito 900) ─── */
 .heading-impact {
   font-family: var(--font-impact);
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  line-height: 0.9;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  line-height: 0.92;
   text-transform: uppercase;
 }
 
