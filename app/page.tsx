@@ -1070,15 +1070,49 @@ export default function Home() {
           {/* Service cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0">
             {t.services.map((service, idx) => (
-              <div key={service.title} className={`fade-up stagger-${idx + 1} border-t border-[#D8D8D8] pt-8 pb-12 md:pr-8`}>
-                <div className="flex items-start justify-between mb-8">
-                  <span className="project-num">{String(idx + 1).padStart(2, '0')}</span>
-                </div>
-                <h3 className="heading text-xl md:text-2xl mb-6">{service.title}</h3>
-                <div className="rule mb-6" />
-                <ul className="space-y-3">
+              <div key={service.title} className={`fade-up stagger-${idx + 1}`} style={{
+                borderTop: '1px solid #D8D8D8',
+                paddingTop: '32px',
+                paddingBottom: '48px',
+                paddingRight: '0',
+              }}>
+                <span style={{
+                  display:'block',
+                  fontFamily:'var(--font-heading)',
+                  fontSize:'10px',
+                  fontWeight:400,
+                  letterSpacing:'0.2em',
+                  color:'#BBBBBB',
+                  marginBottom:'20px',
+                }}>{String(idx + 1).padStart(2, '0')}</span>
+                <h3 className="heading" style={{
+                  fontSize:'clamp(1.2rem, 2.5vw, 1.5rem)',
+                  marginBottom:'28px',
+                  lineHeight:1.1,
+                }}>{service.title}</h3>
+                <div style={{width:'100%', height:'1px', background:'#E8E8E8', marginBottom:'24px'}} />
+                <ul style={{display:'flex', flexDirection:'column', gap:'12px', listStyle:'none', padding:0, margin:0}}>
                   {service.items.map(item => (
-                    <li key={item} className="body-text">— {item}</li>
+                    <li key={item} style={{
+                      display:'flex',
+                      alignItems:'baseline',
+                      gap:'10px',
+                      fontSize:'15px',
+                      lineHeight:'1.6',
+                      color:'#555',
+                      fontWeight:300,
+                    }}>
+                      <span style={{
+                        display:'inline-block',
+                        width:'4px',
+                        height:'4px',
+                        borderRadius:'50%',
+                        background:'#BBBBBB',
+                        flexShrink:0,
+                        marginTop:'6px',
+                      }} />
+                      {item}
+                    </li>
                   ))}
                 </ul>
               </div>
