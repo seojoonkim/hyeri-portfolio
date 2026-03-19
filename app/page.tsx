@@ -1050,10 +1050,11 @@ export default function Home() {
                 {/* Cover image — fullbleed */}
                 <button
                   onClick={() => setActiveProject(activeProject === project.id ? null : project.id)}
-                  className="relative w-full aspect-[3/4] md:aspect-[16/9] overflow-hidden img-cover project-card group cursor-pointer block"
+                  className="relative w-full overflow-hidden img-cover project-card group cursor-pointer block"
+                  style={{aspectRatio:'4/3'}}
                 >
                   <Image src={project.cover} alt={`${project.artist} – ${project.title}`} fill
-                    className="object-cover" sizes="(max-width: 768px) 100vw, 1280px" />
+                    className="object-contain md:object-cover" sizes="(max-width: 768px) 100vw, 1280px" style={{objectPosition:'center top'}} />
                   <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     <span className="text-white font-heading text-[9px] tracking-[0.25em] uppercase flex items-center gap-2">
                       {t.viewDetails} <IconArrowUpRight />
@@ -1076,9 +1077,9 @@ export default function Home() {
                     </p>
                     <div className="grid grid-cols-2 gap-3 md:gap-4">
                       {project.images.map((img, i) => (
-                        <div key={i} className="relative aspect-[16/9] overflow-hidden img-cover">
+                        <div key={i} className="relative overflow-hidden img-cover" style={{aspectRatio:'4/3'}}>
                           <Image src={img} alt={`${project.title} detail ${i + 1}`} fill
-                            className="object-cover" sizes="(max-width: 768px) 50vw, 640px" />
+                            className="object-contain" sizes="(max-width: 768px) 50vw, 640px" style={{objectPosition:'center top'}} />
                         </div>
                       ))}
                     </div>
