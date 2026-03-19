@@ -79,11 +79,11 @@ body {
   line-height: 1.05;
 }
 
-/* ─── Impact heading (Hero/Section — Comfortaa 700) ─── */
+/* ─── Impact heading (Hero/Section — Syne 800, same as .heading) ─── */
 .heading-impact {
-  font-family: var(--font-comfortaa), "Comic Sans MS", cursive;
-  font-weight: 900;
-  letter-spacing: -0.01em;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  letter-spacing: -0.02em;
   line-height: 1.05;
   text-transform: uppercase;
 }

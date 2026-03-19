@@ -864,9 +864,9 @@ export default function Home() {
             </span>
             <span className="hero-text-wrap">
               <span className="hero-text-inner" style={{
-                fontFamily:'var(--font-comfortaa), Comfortaa, cursive',
+                fontFamily:'var(--font-heading)',
                 fontStyle:'normal',
-                fontWeight:300,
+                fontWeight:800,
                 fontSize:'clamp(4.5rem,13vw,12rem)',
                 lineHeight:1.0,
                 letterSpacing:'0.06em',
