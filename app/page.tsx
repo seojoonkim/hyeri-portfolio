@@ -673,9 +673,9 @@ export default function Home() {
               height={55}
               style={{
                 objectFit:'contain',
-                height:'28px',
+                height:'25px',
                 width:'auto',
-                filter: scrolled ? 'brightness(0)' : 'brightness(0) invert(1)',
+                filter: scrolled ? 'none' : 'brightness(0) invert(1)',
                 transition:'filter 0.3s',
               }}
             />
@@ -744,7 +744,7 @@ export default function Home() {
           {/* 로고 */}
           <div style={{position:'absolute', top:'20px', left:'20px'}}>
             <Image src="/images/thom-logo.png" alt="THE HEART OF MATTER" width={80} height={44}
-              style={{objectFit:'contain', height:'24px', width:'auto', filter:'brightness(0)'}} />
+              style={{objectFit:'contain', height:'21px', width:'auto', filter:'brightness(0)'}} />
           </div>
           {/* 닫기 버튼 */}
           <button
