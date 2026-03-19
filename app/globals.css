@@ -27,6 +27,13 @@ html {
 
 body {
   overflow-x: hidden;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* 섹션 구분선 */
+.section-divider {
+  border-top: 1px solid #E8E8E8;
 }
 
 ::selection {
@@ -149,7 +156,7 @@ body {
   100% { transform: translateX(-50%); }
 }
 
-/* ─── Explicit padding utilities for Tailwind v4 ─── */
+/* ─── Explicit utilities for Tailwind v4 ─── */
 .section-pad {
   padding-left: 20px;
   padding-right: 20px;
@@ -165,4 +172,59 @@ body {
     padding-left: 80px;
     padding-right: 80px;
   }
+}
+
+/* ─── Tag pill style ─── */
+.tag-pill {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: #F0F0F0;
+  color: #666;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* ─── Category tag (minimal) ─── */
+.tag-minimal {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: #F5F5F5;
+  color: #888;
+  padding: 4px 10px;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+/* ─── Language toggle ─── */
+.lang-btn {
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: #AAAAAA;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px 0;
+  transition: color 0.2s;
+}
+.lang-btn:hover { color: #0A0A0A; }
+.lang-btn.active {
+  color: #0A0A0A;
+  font-weight: 600;
+}
+.lang-sep {
+  font-size: 10px;
+  color: #D0D0D0;
+  margin: 0 3px;
+  user-select: none;
+}
+
+/* ─── Section border top ─── */
+.border-section {
+  border-top: 1px solid #EBEBEB;
 }

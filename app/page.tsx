@@ -747,37 +747,41 @@ export default function Home() {
               </a>
             ))}
             {/* Language Toggle */}
-            <div className="flex gap-1 ml-4">
-              {(["ko", "en", "ja"] as Lang[]).map((l) => (
-                <button
-                  key={l}
-                  onClick={() => setLang(l)}
-                  className={`px-3 py-1 text-xs tracking-wider rounded-full transition-colors ${
-                    lang === l
-                      ? "bg-[#0A0A0A] text-white"
-                      : "text-[#6B6B6B] hover:text-[#0A0A0A]"
-                  }`}
-                >
-                  {l === "ko" ? "한" : l === "en" ? "EN" : "日"}
-                </button>
+            <div className="flex items-center gap-0.5 ml-6">
+              {(["ko", "en", "ja"] as Lang[]).map((l, i) => (
+                <span key={l} className="flex items-center">
+                  {i > 0 && <span className="text-[#D0D0D0] text-[11px] mx-1">/</span>}
+                  <button
+                    onClick={() => setLang(l)}
+                    className={`text-[11px] tracking-wide transition-colors ${
+                      lang === l
+                        ? "text-[#0A0A0A] font-semibold"
+                        : "text-[#B0B0B0] hover:text-[#0A0A0A]"
+                    }`}
+                  >
+                    {l === "ko" ? "한" : l === "en" ? "EN" : "日"}
+                  </button>
+                </span>
               ))}
             </div>
           </div>
-          <div className="flex items-center gap-4 md:hidden">
+          <div className="flex items-center gap-3 md:hidden">
             {/* Mobile Language Toggle */}
-            <div className="flex gap-1">
-              {(["ko", "en", "ja"] as Lang[]).map((l) => (
-                <button
-                  key={l}
-                  onClick={() => setLang(l)}
-                  className={`px-2 py-0.5 text-[10px] tracking-wider rounded-full transition-colors ${
-                    lang === l
-                      ? "bg-[#0A0A0A] text-white"
-                      : "text-[#6B6B6B]"
-                  }`}
-                >
-                  {l === "ko" ? "한" : l === "en" ? "EN" : "日"}
-                </button>
+            <div className="flex items-center gap-0.5">
+              {(["ko", "en", "ja"] as Lang[]).map((l, i) => (
+                <span key={l} className="flex items-center">
+                  {i > 0 && <span className="text-[#D0D0D0] text-[10px] mx-0.5">/</span>}
+                  <button
+                    onClick={() => setLang(l)}
+                    className={`text-[11px] tracking-wide transition-colors ${
+                      lang === l
+                        ? "text-[#0A0A0A] font-semibold"
+                        : "text-[#B0B0B0] hover:text-[#0A0A0A]"
+                    }`}
+                  >
+                    {l === "ko" ? "한" : l === "en" ? "EN" : "日"}
+                  </button>
+                </span>
               ))}
             </div>
             <button
@@ -807,7 +811,7 @@ export default function Home() {
       </nav>
 
       {/* ─── HERO ─── */}
-      <section className="relative min-h-screen flex flex-col justify-end pb-16 md:pb-24 section-pad overflow-hidden">
+      <section className="relative min-h-screen flex flex-col justify-end pb-16 md:pb-24 section-pad overflow-hidden border-b border-[#2a2a2a]">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/img_008_48.jpeg"
@@ -854,7 +858,7 @@ export default function Home() {
       </section>
 
       {/* ─── DESIGNER PROFILE ─── */}
-      <section className="py-16 md:py-28 section-pad bg-white">
+      <section className="py-12 md:py-20 section-pad bg-white section-divider">
         <div className="max-w-[1200px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
             {/* Left: Name & Title */}
@@ -884,11 +888,11 @@ export default function Home() {
             </div>
           </div>
           {/* Tags */}
-          <div className="mt-10 flex flex-wrap gap-2 fade-in-up stagger-3">
+          <div className="mt-8 flex flex-wrap gap-2 fade-in-up stagger-3">
             {designerTags.map((tag) => (
               <span
                 key={tag}
-                className="text-[10px] tracking-[0.12em] uppercase bg-[#F5F5F5] text-[#6B6B6B] px-3 py-1 rounded-sm font-medium"
+                className="inline-block text-[11px] tracking-[0.12em] uppercase bg-[#F0F0F0] text-[#555] px-3 py-1.5 rounded-full font-medium"
               >
                 {tag}
               </span>
@@ -898,7 +902,7 @@ export default function Home() {
       </section>
 
       {/* ─── ABOUT ─── */}
-      <section id="about" className="py-16 md:py-28 section-pad">
+      <section id="about" className="py-12 md:py-20 section-pad border-t border-[#E8E8E8]">
         <div className="max-w-[1200px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
             <div className="md:col-span-5 fade-in-up">
@@ -960,7 +964,7 @@ export default function Home() {
       </section>
 
       {/* ─── CONCEPT GALLERY (scrolling strip) ─── */}
-      <section className="py-12 md:py-16 bg-[#0A0A0A] overflow-hidden">
+      <section className="py-10 md:py-14 bg-[#0A0A0A] overflow-hidden">
         <div className="flex gap-4 animate-[scroll_40s_linear_infinite] w-max">
           {[...conceptImages, ...conceptImages].map((img, i) => (
             <div key={i} className="relative w-48 md:w-64 aspect-[3/2] rounded-sm overflow-hidden shrink-0">
@@ -977,7 +981,7 @@ export default function Home() {
       </section>
 
       {/* ─── SELECTED WORK ─── */}
-      <section id="work" className="py-16 md:py-28 bg-[#F5F5F5]">
+      <section id="work" className="py-12 md:py-20 bg-[#F5F5F5]">
         <div className="max-w-[1200px] mx-auto section-pad">
           <div className="flex items-end justify-between mb-10 md:mb-16">
             <div className="fade-in-up">
@@ -1076,7 +1080,7 @@ export default function Home() {
       </section>
 
       {/* ─── SERVICES ─── */}
-      <section id="services" className="py-16 md:py-28 section-pad">
+      <section id="services" className="py-12 md:py-20 section-pad border-t border-[#E8E8E8]">
         <div className="max-w-[1200px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-10 md:mb-16">
             <div className="md:col-span-5 fade-in-up">
@@ -1098,7 +1102,7 @@ export default function Home() {
             {t.services.map((service, idx) => (
               <div
                 key={service.title}
-                className={`fade-in-up stagger-${idx + 1} bg-white border border-[#F0F0F0] p-6 md:p-8 rounded-sm`}
+                className={`fade-in-up stagger-${idx + 1} bg-white border-0 border-b border-[#E8E8E8] py-6 px-4 md:border md:border-[#F0F0F0] md:p-8 md:rounded-sm`}
               >
                 <div className="flex items-start justify-between mb-6">
                   <h3 className="font-heading text-xl tracking-tight font-medium">{service.title}</h3>
@@ -1106,11 +1110,11 @@ export default function Home() {
                     {String(idx + 1).padStart(2, "0")}
                   </span>
                 </div>
-                <ul className="space-y-3">
+                <ul className="space-y-2">
                   {service.items.map((item) => (
                     <li
                       key={item}
-                      className="text-sm text-[#6B6B6B] leading-relaxed flex items-start gap-3"
+                      className="text-sm text-[#555] leading-relaxed flex items-start gap-3"
                     >
                       <span className="w-1 h-1 rounded-full bg-[#E85D4A] mt-2 shrink-0" />
                       {item}
@@ -1124,7 +1128,7 @@ export default function Home() {
       </section>
 
       {/* ─── METHODOLOGY ─── */}
-      <section className="py-16 md:py-28 section-pad bg-[#0A0A0A] text-white">
+      <section className="py-12 md:py-20 section-pad bg-[#0A0A0A] text-white">
         <div className="max-w-[1200px] mx-auto">
           <div className="mb-10 md:mb-16 fade-in-up">
             <p className="text-[10px] tracking-[0.3em] uppercase text-[#E85D4A] mb-4">
@@ -1157,7 +1161,7 @@ export default function Home() {
       </section>
 
       {/* ─── PROCESS ─── */}
-      <section id="process" className="py-16 md:py-28 section-pad">
+      <section id="process" className="py-12 md:py-20 section-pad border-t border-[#E8E8E8]">
         <div className="max-w-[1200px] mx-auto">
           <div className="mb-10 md:mb-16 fade-in-up">
             <p className="text-[10px] tracking-[0.3em] uppercase text-[#E85D4A] mb-4">
@@ -1209,7 +1213,7 @@ export default function Home() {
       </section>
 
       {/* ─── ALLIANCE ─── */}
-      <section className="py-16 md:py-28 section-pad bg-[#F5F5F5]">
+      <section className="py-12 md:py-20 section-pad bg-[#F5F5F5]">
         <div className="max-w-[1200px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
             <div className="md:col-span-5 fade-in-up">
@@ -1238,7 +1242,7 @@ export default function Home() {
       </section>
 
       {/* ─── CONTACT ─── */}
-      <section id="contact" className="relative py-16 md:py-28 section-pad bg-[#0A0A0A] text-white overflow-hidden">
+      <section id="contact" className="relative py-12 md:py-20 section-pad bg-[#0A0A0A] text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/img_008_00.jpeg"
