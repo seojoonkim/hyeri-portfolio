@@ -803,22 +803,32 @@ export default function Home() {
           background: 'radial-gradient(ellipse at center, transparent 35%, rgba(0,0,0,0.5) 100%)',
         }} />
 
-        {/* 떠다니는 빛 입자 */}
-        <div className="absolute inset-0 z-2 pointer-events-none overflow-hidden">
+        {/* 떠다니는 하트 파티클 */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden" style={{zIndex:3}}>
           {[
-            { left:'15%', bottom:'35%', delay:'0s', duration:'6s' },
-            { left:'25%', bottom:'45%', delay:'1.5s', duration:'8s' },
-            { left:'40%', bottom:'30%', delay:'3s', duration:'7s' },
-            { left:'60%', bottom:'40%', delay:'0.8s', duration:'9s' },
-            { left:'75%', bottom:'55%', delay:'2s', duration:'6.5s' },
-            { left:'85%', bottom:'35%', delay:'4s', duration:'8s' },
-            { left:'50%', bottom:'25%', delay:'1s', duration:'7.5s' },
+            { left:'12%', bottom:'38%', delay:'0s',   duration:'6s',   size:8,  opacity:0.35 },
+            { left:'22%', bottom:'48%', delay:'1.5s', duration:'8s',   size:6,  opacity:0.25 },
+            { left:'38%', bottom:'32%', delay:'3s',   duration:'7s',   size:10, opacity:0.3  },
+            { left:'58%', bottom:'42%', delay:'0.8s', duration:'9s',   size:7,  opacity:0.2  },
+            { left:'72%', bottom:'58%', delay:'2s',   duration:'6.5s', size:9,  opacity:0.3  },
+            { left:'84%', bottom:'36%', delay:'4s',   duration:'8s',   size:6,  opacity:0.25 },
+            { left:'48%', bottom:'27%', delay:'1s',   duration:'7.5s', size:8,  opacity:0.2  },
+            { left:'65%', bottom:'65%', delay:'2.5s', duration:'10s',  size:5,  opacity:0.15 },
+            { left:'30%', bottom:'62%', delay:'5s',   duration:'9s',   size:7,  opacity:0.2  },
           ].map((p, i) => (
-            <div key={i} className="hero-particle" style={{
+            <div key={i} style={{
+              position:'absolute',
               left: p.left,
               bottom: p.bottom,
+              width: p.size,
+              height: p.size,
               animation: `floatParticle${i % 2 === 0 ? '' : '2'} ${p.duration} ease-in-out ${p.delay} infinite`,
-            }} />
+            }}>
+              <svg viewBox="0 0 10 9" width={p.size} height={p.size} fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 8.5C5 8.5 0.5 5.5 0.5 2.8C0.5 1.5 1.5 0.5 2.8 0.5C3.6 0.5 4.4 0.9 5 1.6C5.6 0.9 6.4 0.5 7.2 0.5C8.5 0.5 9.5 1.5 9.5 2.8C9.5 5.5 5 8.5 5 8.5Z"
+                  fill="#FF3D7F" fillOpacity={p.opacity} />
+              </svg>
+            </div>
           ))}
         </div>
 
