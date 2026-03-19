@@ -678,11 +678,14 @@ export default function Home() {
               fontSize:'13px',
               letterSpacing:'0.12em',
               lineHeight:1.2,
-              color: scrolled ? '#1A1A1A' : '#ffffff',
-              transition:'color 0.3s',
               textTransform:'uppercase',
               whiteSpace:'nowrap',
-            }}>THE HEART OF MATTER</span>
+              color: scrolled ? '#1A1A1A' : '#ffffff',
+              transition:'color 0.3s',
+            }}>
+              <span style={{color:'#FF3D7F'}}>THE HEART</span>
+              {' '}OF MATTER
+            </span>
           </a>
 
           {/* Desktop nav */}
@@ -855,15 +858,14 @@ export default function Home() {
           </div>
           <h1 style={{textShadow:'0 0 80px rgba(255,255,255,0.08), 0 0 160px rgba(255,255,255,0.04)'}}>
             <span className="hero-text-wrap">
-              <span className="hero-text-inner" style={{
+              <span className="hero-text-inner hero-heart-gradient" style={{
                 animationDelay:'0.3s',
                 fontFamily:'var(--font-comfortaa), Comfortaa, cursive',
                 fontStyle:'normal',
-                fontWeight:400,
+                fontWeight:700,
                 fontSize:'clamp(4.5rem,13vw,12rem)',
                 lineHeight:1.0,
                 letterSpacing:'0.02em',
-                color:'#fff',
               }}>
                 THE HEART
               </span>
@@ -877,7 +879,7 @@ export default function Home() {
                 lineHeight:1.0,
                 letterSpacing:'0.06em',
                 color:'#fff',
-                animation:'textReveal 1s cubic-bezier(0.16,1,0.3,1) 0.5s forwards, colorShiftPink 8s ease-in-out 2.5s infinite',
+                animation:'textReveal 1s cubic-bezier(0.16,1,0.3,1) 0.5s forwards',
               }}>
                 OF MATTER
               </span>

@@ -406,3 +406,19 @@ body {
 .accent-pulse {
   animation: accentPulse 6s ease-in-out infinite;
 }
+
+/* ─── Hero "THE HEART" — 흰색→핑크 그라데이션 애니메이션 ─── */
+@keyframes heartGradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-heart-gradient {
+  background: linear-gradient(90deg, #ffffff 0%, #ffffff 30%, #FF3D7F 60%, #ffffff 100%);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: heartGradientShift 6s ease-in-out 2s infinite;
+}
