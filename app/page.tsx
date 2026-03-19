@@ -760,33 +760,50 @@ export default function Home() {
         </div>
 
         {/* Hero content */}
-        <div className="relative z-10 container pb-16 md:pb-24">
-          <div className="fade-up">
-            <p className="label text-white/50 mb-6 md:mb-8">{t.heroSubtitle}</p>
+        <div className="relative z-10 container" style={{paddingBottom: 'clamp(60px, 12vw, 120px)'}}>
+          <div style={{opacity:0, animation:'fadeInUp 1s ease 0.2s forwards'}}>
+            <p className="label" style={{color:'rgba(255,255,255,0.5)', marginBottom:'24px', fontSize:'12px'}}>{t.heroSubtitle}</p>
           </div>
-          <h1 className="fade-up stagger-1">
-            <span className="block display text-[clamp(3.5rem,10vw,9rem)] text-white">
+          <h1 style={{opacity:0, animation:'fadeInUp 1s ease 0.4s forwards'}}>
+            <span className="block" style={{
+              fontFamily:'var(--font-heading)',
+              fontStyle:'normal',
+              fontWeight:300,
+              fontSize:'clamp(3.8rem,11vw,10rem)',
+              lineHeight:0.92,
+              letterSpacing:'-0.02em',
+              color:'#fff',
+            }}>
               THE HEART
             </span>
-            <span className="block display text-[clamp(3.5rem,10vw,9rem)] text-white">
+            <span className="block" style={{
+              fontFamily:'var(--font-heading)',
+              fontStyle:'normal',
+              fontWeight:300,
+              fontSize:'clamp(3.8rem,11vw,10rem)',
+              lineHeight:0.92,
+              letterSpacing:'-0.02em',
+              color:'#fff',
+            }}>
               OF MATTER
             </span>
           </h1>
 
-          <div className="fade-up stagger-2 mt-10 md:mt-14 flex flex-col md:flex-row md:items-end md:justify-between gap-8">
-            <p className="max-w-md text-white/60 text-sm leading-relaxed font-light">
+          <div style={{opacity:0, animation:'fadeInUp 1s ease 0.7s forwards', marginTop:'clamp(32px,6vw,56px)', display:'flex', flexDirection:'column', gap:'16px'}}>
+            <p style={{maxWidth:'400px', color:'rgba(255,255,255,0.55)', fontSize:'15px', lineHeight:1.8, fontWeight:300}}>
               {t.heroTagline}<br />{t.heroTagline2}
             </p>
             <a href="#work"
-              className="group flex items-center gap-2 font-heading text-[9px] tracking-[0.25em] uppercase text-white border-b border-white/30 pb-2 self-start md:self-auto hover:border-white transition-colors">
+              className="group"
+              style={{display:'inline-flex', alignItems:'center', gap:'8px', fontFamily:'var(--font-heading)', fontSize:'10px', letterSpacing:'0.25em', textTransform:'uppercase', color:'#fff', borderBottom:'1px solid rgba(255,255,255,0.3)', paddingBottom:'6px', alignSelf:'flex-start', textDecoration:'none', transition:'border-color 0.2s'}}>
               {t.heroCta}
-              <span className="group-hover:translate-x-1 transition-transform"><IconArrowUpRight /></span>
+              <span style={{transition:'transform 0.2s'}}><IconArrowUpRight /></span>
             </a>
           </div>
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 animate-bounce text-white/30">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 text-white/30" style={{animation:'fadeInUp 1s ease 1.2s both, bounce 2s ease 1.5s infinite'}}>
           <IconArrowDown />
         </div>
       </section>

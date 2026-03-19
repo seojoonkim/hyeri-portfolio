@@ -205,6 +205,18 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* ─── Hero fadeInUp (은은하게) ─── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Scroll bounce ─── */
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(6px); }
+}
+
 /* ─── Pull quote ─── */
 .pull-quote {
   font-family: var(--font-display);
