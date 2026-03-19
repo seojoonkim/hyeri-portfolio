@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, DM_Serif_Display } from "next/font/google";
+import { DM_Sans, Outfit } from "next/font/google";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -8,10 +8,10 @@ const dmSans = DM_Sans({
   weight: ["300", "400", "500", "600", "700"],
 });
 
-const dmSerif = DM_Serif_Display({
+const outfit = Outfit({
   subsets: ["latin"],
-  variable: "--font-dm-serif",
-  weight: "400",
+  variable: "--font-outfit",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="ko" className="scroll-smooth">
       <body
-        className={`${dmSans.variable} ${dmSerif.variable} font-sans antialiased bg-white text-[#0A0A0A]`}
+        className={`${dmSans.variable} ${outfit.variable} font-sans antialiased bg-white text-[#0A0A0A]`}
       >
         {children}
       </body>
