@@ -837,7 +837,7 @@ export default function Home() {
           </div>
           <h1 style={{opacity:0, animation:'fadeInUp 1s ease 0.4s forwards', textShadow:'0 0 80px rgba(255,255,255,0.08), 0 0 160px rgba(255,255,255,0.04)'}}>
             <span className="block" style={{
-              fontFamily:'var(--font-impact)',
+              fontFamily:'var(--font-comfortaa), Comfortaa, cursive',
               fontStyle:'normal',
               fontWeight:400,
               fontSize:'clamp(4.5rem,13vw,12rem)',
@@ -848,7 +848,7 @@ export default function Home() {
               THE HEART
             </span>
             <span className="block" style={{
-              fontFamily:'var(--font-impact)',
+              fontFamily:'var(--font-comfortaa), Comfortaa, cursive',
               fontStyle:'normal',
               fontWeight:400,
               fontSize:'clamp(4.5rem,13vw,12rem)',

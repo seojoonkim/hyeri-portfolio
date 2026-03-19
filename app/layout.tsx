@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, DM_Serif_Display, Outfit, Nunito, Syne } from "next/font/google";
+import { DM_Sans, DM_Serif_Display, Outfit, Comfortaa, Syne } from "next/font/google";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -21,10 +21,10 @@ const dmSerif = DM_Serif_Display({
   style: ["normal", "italic"],
 });
 
-const nunito = Nunito({
+const comfortaa = Comfortaa({
   subsets: ["latin"],
-  variable: "--font-bebas",
-  weight: ["800", "900"],
+  variable: "--font-comfortaa",
+  weight: ["700"],
   style: ["normal"],
 });
 
@@ -54,7 +54,7 @@ export default function RootLayout({
   return (
     <html lang="ko" className="scroll-smooth">
       <body
-        className={`${dmSans.variable} ${outfit.variable} ${dmSerif.variable} ${nunito.variable} ${syne.variable} font-sans antialiased bg-white text-[#0A0A0A]`}
+        className={`${dmSans.variable} ${outfit.variable} ${dmSerif.variable} ${comfortaa.variable} ${syne.variable} font-sans antialiased bg-white text-[#0A0A0A]`}
       >
         {children}
       </body>
