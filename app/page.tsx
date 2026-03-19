@@ -1261,36 +1261,79 @@ export default function Home() {
 
             {/* Right — contact info */}
             <div className="md:col-span-5 flex flex-col justify-end fade-up stagger-1">
-              <div style={{display:'flex', flexDirection:'column', gap:'40px'}}>
+              <div style={{display:'flex', flexDirection:'column', gap:'36px'}}>
                 <div>
-                  <p className="label text-white/30" style={{marginBottom:'16px'}}>{t.contactGeneral}</p>
+                  <p style={{
+                    fontFamily:'var(--font-heading)',
+                    fontSize:'11px',
+                    fontWeight:400,
+                    letterSpacing:'0.2em',
+                    textTransform:'uppercase',
+                    color:'rgba(255,255,255,0.4)',
+                    marginBottom:'12px',
+                  }}>{t.contactGeneral}</p>
                   <a href="mailto:hello@theheartofmatter.com"
-                    className="flex items-center gap-3 text-lg text-white hover:text-[#E85D4A] transition-colors group">
+                    style={{display:'flex', alignItems:'center', gap:'10px', textDecoration:'none', color:'#fff'}}
+                    className="group hover:opacity-80 transition-opacity">
                     <IconMail />
-                    <span className="border-b border-white/20 pb-1 group-hover:border-[#E85D4A]">
+                    <span style={{
+                      fontFamily:'var(--font-dm-sans), DM Sans, sans-serif',
+                      fontSize:'16px',
+                      fontWeight:300,
+                      letterSpacing:'0.01em',
+                      borderBottom:'1px solid rgba(255,255,255,0.2)',
+                      paddingBottom:'4px',
+                    }}>
                       hello@theheartofmatter.com
                     </span>
                   </a>
                 </div>
                 <div>
-                  <p className="label text-white/30" style={{marginBottom:'16px'}}>{t.contactProject}</p>
+                  <p style={{
+                    fontFamily:'var(--font-heading)',
+                    fontSize:'11px',
+                    fontWeight:400,
+                    letterSpacing:'0.2em',
+                    textTransform:'uppercase',
+                    color:'rgba(255,255,255,0.4)',
+                    marginBottom:'12px',
+                  }}>{t.contactProject}</p>
                   <a href="mailto:project@theheartofmatter.com"
-                    className="flex items-center gap-3 text-lg text-white hover:text-[#E85D4A] transition-colors group">
+                    style={{display:'flex', alignItems:'center', gap:'10px', textDecoration:'none', color:'#fff'}}
+                    className="group hover:opacity-80 transition-opacity">
                     <IconMail />
-                    <span className="border-b border-white/20 pb-1 group-hover:border-[#E85D4A]">
+                    <span style={{
+                      fontFamily:'var(--font-dm-sans), DM Sans, sans-serif',
+                      fontSize:'16px',
+                      fontWeight:300,
+                      letterSpacing:'0.01em',
+                      borderBottom:'1px solid rgba(255,255,255,0.2)',
+                      paddingBottom:'4px',
+                    }}>
                       project@theheartofmatter.com
                     </span>
                   </a>
                 </div>
-                <div className="pt-4">
-                  <p className="label text-white/30">{t.contactLocation}</p>
+                <div>
+                  <p style={{
+                    fontFamily:'var(--font-heading)',
+                    fontSize:'11px',
+                    fontWeight:400,
+                    letterSpacing:'0.2em',
+                    textTransform:'uppercase',
+                    color:'rgba(255,255,255,0.4)',
+                    marginBottom:'8px',
+                  }}>{t.contactLocation}</p>
+                  <p style={{fontSize:'15px', color:'rgba(255,255,255,0.6)', fontWeight:300}}>Seoul, Korea</p>
                 </div>
                 <p style={{
-                  fontSize:'12px',
-                  letterSpacing:'0.15em',
+                  fontFamily:'var(--font-heading)',
+                  fontSize:'11px',
+                  letterSpacing:'0.2em',
                   textTransform:'uppercase',
-                  color:'rgba(255,255,255,0.3)',
-                  marginTop:'40px',
+                  color:'rgba(255,255,255,0.25)',
+                  paddingTop:'16px',
+                  borderTop:'1px solid rgba(255,255,255,0.08)',
                 }}>
                   {lang === 'ko' ? '여백은 자신감이다.' : lang === 'en' ? 'Negative space is confidence.' : '余白は自信だ。'}
                 </p>
@@ -1301,16 +1344,47 @@ export default function Home() {
       </section>
 
       {/* ─── FOOTER ─── */}
-      <footer className="py-10 bg-[#0A0A0A] text-white border-t border-white/10">
-        <div className="container flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="font-heading text-[9px] tracking-[0.15em] text-white/25">{t.footerCopy}</p>
-          <div className="flex items-center gap-6">
+      <footer style={{
+        paddingTop:'48px',
+        paddingBottom:'56px',
+        background:'#0A0A0A',
+        borderTop:'1px solid rgba(255,255,255,0.08)',
+      }}>
+        <div className="container" style={{display:'flex', flexDirection:'column', gap:'32px'}}>
+          {/* Nav links row */}
+          <div style={{display:'flex', flexWrap:'wrap', gap:'24px', alignItems:'center'}}>
             {navLinks.map(link => (
               <a key={link.label} href={link.href}
-                className="font-heading text-[9px] tracking-[0.2em] uppercase text-white/25 hover:text-white transition-colors">
+                style={{
+                  fontFamily:'var(--font-heading)',
+                  fontSize:'11px',
+                  letterSpacing:'0.18em',
+                  textTransform:'uppercase',
+                  color:'rgba(255,255,255,0.35)',
+                  textDecoration:'none',
+                  transition:'color 0.2s',
+                }}
+                className="hover:text-white">
                 {link.label}
               </a>
             ))}
+          </div>
+          {/* Divider */}
+          <div style={{width:'100%', height:'1px', background:'rgba(255,255,255,0.06)'}} />
+          {/* Copyright */}
+          <div style={{display:'flex', flexDirection:'column', gap:'8px'}}>
+            <p style={{
+              fontFamily:'var(--font-heading)',
+              fontSize:'11px',
+              letterSpacing:'0.12em',
+              color:'rgba(255,255,255,0.2)',
+            }}>{t.footerCopy}</p>
+            <p style={{
+              fontFamily:'var(--font-heading)',
+              fontSize:'10px',
+              letterSpacing:'0.08em',
+              color:'rgba(255,255,255,0.12)',
+            }}>THE HEART OF MATTER — Creative Direction Collective</p>
           </div>
         </div>
       </footer>
