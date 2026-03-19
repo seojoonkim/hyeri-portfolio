@@ -5,7 +5,7 @@ import "./globals.css";
 const dmSans = Chiron_Hei_HK({
   subsets: ["latin"],
   variable: "--font-dm-sans",
-  weight: ["400"],
+  weight: ["200"],
 });
 
 const outfit = Outfit({
