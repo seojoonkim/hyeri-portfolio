@@ -692,7 +692,7 @@ export default function Home() {
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map(link => (
               <a key={link.label} href={link.href}
-                className="font-heading text-[9px] tracking-[0.25em] uppercase text-[#888] hover:text-[#0A0A0A] transition-colors duration-300">
+                style={{fontFamily:"var(--font-serif), DM Serif Display, serif", fontSize:"11px", letterSpacing:"0.12em", textTransform:"uppercase", color:"#888", transition:"color 0.2s", textDecoration:"none"}} className="hover:text-[#0A0A0A]">
                 {link.label}
               </a>
             ))}
@@ -713,7 +713,7 @@ export default function Home() {
             <div className="flex items-center" style={{gap:'4px'}}>
               {(['ko', 'en', 'ja'] as Lang[]).map((l, i) => (
                 <span key={l} className="flex items-center">
-                  {i > 0 && <span className="lang-sep" style={{margin:'0 3px', fontSize:'var(--fs-1)', color: scrolled ? '#CCC' : 'rgba(255,255,255,0.3)'}}>/</span>}
+                  {i > 0 && <span className="lang-sep" style={{margin:'0 3px', fontSize:'13px', color: scrolled ? '#CCC' : 'rgba(255,255,255,0.3)'}}>/</span>}
                   <button
                     onClick={() => setLang(l)}
                     className={`lang-btn${lang === l ? ' active' : ''}`}
@@ -844,12 +844,7 @@ export default function Home() {
           ))}
         </div>
 
-        {/* Page number — left vertical */}
-        <div className="absolute left-6 md:left-12 bottom-32 md:bottom-40 z-10 hidden md:block">
-          <p className="font-heading text-[10px] tracking-[0.2em] text-white/30 [writing-mode:vertical-lr]">
-            01 / 09
-          </p>
-        </div>
+
 
         {/* Issue label */}
         {/* PORTFOLIO 2024 label removed */}
@@ -857,7 +852,7 @@ export default function Home() {
         {/* Hero content */}
         <div className="relative z-10 container" style={{paddingBottom: 'clamp(60px, 12vw, 120px)'}}>
           <div className="hero-label-reveal">
-            <p className="label" style={{color:'rgba(255,255,255,0.5)', marginBottom:'24px', fontSize:'var(--fs-1)'}}>{t.heroSubtitle}</p>
+            <p className="label" style={{color:'rgba(255,255,255,0.5)', marginBottom:'24px', fontSize:'13px'}}>{t.heroSubtitle}</p>
           </div>
           <h1 style={{textShadow:'0 0 80px rgba(255,255,255,0.08), 0 0 160px rgba(255,255,255,0.04)'}}>
             <span className="hero-text-wrap">
@@ -896,7 +891,7 @@ export default function Home() {
             </p>
             <a href="#work"
               className="group"
-              style={{display:'inline-flex', alignItems:'center', gap:'8px', fontFamily:'var(--font-heading)', fontSize:'var(--fs-1)', letterSpacing:'0.25em', textTransform:'uppercase', color:'#fff', borderBottom:'1px solid rgba(255,255,255,0.3)', paddingBottom:'6px', alignSelf:'flex-start', textDecoration:'none', transition:'border-color 0.2s'}}>
+              style={{display:'inline-flex', alignItems:'center', gap:'8px', fontFamily:'var(--font-heading)', fontSize:'13px', letterSpacing:'0.25em', textTransform:'uppercase', color:'#fff', borderBottom:'1px solid rgba(255,255,255,0.3)', paddingBottom:'6px', alignSelf:'flex-start', textDecoration:'none', transition:'border-color 0.2s'}}>
               {t.heroCta}
               <span style={{transition:'transform 0.2s'}}><IconArrowUpRight /></span>
             </a>
@@ -1143,7 +1138,7 @@ export default function Home() {
                 <span style={{
                   display:'block',
                   fontFamily:'var(--font-heading)',
-                  fontSize:'var(--fs-1)',
+                  fontSize:'13px',
                   fontWeight:400,
                   letterSpacing:'0.2em',
                   color:'#BBBBBB',
@@ -1201,7 +1196,7 @@ export default function Home() {
                 <span style={{
                   display:'block',
                   fontFamily:'var(--font-heading)',
-                  fontSize:'var(--fs-1)',
+                  fontSize:'13px',
                   fontWeight:400,
                   letterSpacing:'0.2em',
                   color:'#BBBBBB',
@@ -1424,7 +1419,7 @@ export default function Home() {
             }}>{t.footerCopy}</p>
             <p style={{
               fontFamily:'var(--font-heading)',
-              fontSize:'var(--fs-1)',
+              fontSize:'13px',
               letterSpacing:'0.08em',
               color:'rgba(255,255,255,0.12)',
             }}>THE HEART OF MATTER — Creative Direction Collective</p>

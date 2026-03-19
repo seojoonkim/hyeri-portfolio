@@ -52,7 +52,7 @@ body {
 /* ─── Labels ─── */
 .label {
   font-family: var(--font-heading);
-  font-size: var(--fs-1);
+  font-size: 13px;
   font-weight: 400;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -107,7 +107,7 @@ body {
 .tag {
   display: inline-block;
   font-family: var(--font-comfortaa), sans-serif;
-  font-size: var(--fs-1);
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -133,7 +133,7 @@ body {
 /* ─── Lang toggle ─── */
 .lang-btn {
   font-family: var(--font-heading);
-  font-size: var(--fs-1);
+  font-size: 13px;
   font-weight: 400;
   letter-spacing: 0.1em;
   color: #BBBBBB;
@@ -145,7 +145,7 @@ body {
 }
 .lang-btn:hover, .lang-btn.active { color: var(--ink); }
 .lang-btn.active { font-weight: 600; }
-.lang-sep { font-size: var(--fs-1); color: #DDDDDD; margin: 0 6px; user-select: none; }
+.lang-sep { font-size: 13px; color: #DDDDDD; margin: 0 6px; user-select: none; }
 
 /* ─── Image ─── */
 .img-cover { position: relative; overflow: hidden; }
@@ -155,7 +155,7 @@ body {
 /* ─── Project number ─── */
 .project-num {
   font-family: var(--font-heading);
-  font-size: var(--fs-1);
+  font-size: 13px;
   font-weight: 400;
   letter-spacing: 0.15em;
   color: #BBBBBB;
@@ -418,7 +418,7 @@ body {
 
 /* ─── Type Scale (7단계 표준화) ─── */
 :root {
-  --fs-1: 11px;                          /* label, caption */
+  --fs-1: 13px;                          /* label, caption */
   --fs-2: 14px;                          /* nav, tag */
   --fs-3: 16px;                          /* body */
   --fs-4: clamp(1.3rem, 3vw, 1.9rem);    /* card title, subheading */
