@@ -858,14 +858,15 @@ export default function Home() {
           </div>
           <h1 style={{textShadow:'0 0 80px rgba(255,255,255,0.08), 0 0 160px rgba(255,255,255,0.04)'}}>
             <span className="hero-text-wrap">
-              <span className="hero-text-inner hero-heart-gradient" style={{
-                animationDelay:'0.3s',
+              <span className="hero-heart-gradient" style={{
+                display:'block',
                 fontFamily:'var(--font-comfortaa), Comfortaa, cursive',
                 fontStyle:'normal',
                 fontWeight:700,
                 fontSize:'clamp(4.5rem,13vw,12rem)',
                 lineHeight:1.0,
                 letterSpacing:'0.02em',
+                opacity:0,
               }}>
                 THE HEART
               </span>
