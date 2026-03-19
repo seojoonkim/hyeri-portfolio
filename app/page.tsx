@@ -1095,7 +1095,6 @@ export default function Home() {
                 borderTop: '1px solid #E0E0E0',
                 paddingTop: '32px',
                 paddingBottom: '48px',
-                paddingRight: '0',
               }}
               className="md:odd:pr-16">
                 <span style={{
@@ -1187,24 +1186,24 @@ export default function Home() {
       {/* ─── METHODOLOGY (dark section) ─── */}
       <section className="section bg-[#0A0A0A] text-white">
         <div className="container">
-          <div className="mb-16 md:mb-24 fade-up">
-            <p className="label label-accent mb-4">{t.methodologyLabel}</p>
-            <h2 className="heading-impact" style={{fontSize:'clamp(2.5rem,6vw,5rem)',lineHeight:1.05,color:'#fff'}}>{t.methodologyTitle}</h2>
+          <div className="fade-up" style={{marginBottom:'64px'}}>
+            <p className="label label-accent" style={{marginBottom:'16px'}}>{t.methodologyLabel}</p>
+            <h2 className="heading-impact" style={{fontSize:'clamp(2.5rem,6vw,5rem)',lineHeight:0.95,color:'#fff'}}>{t.methodologyTitle}</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3" style={{gap:0}}>
             {t.methodology.map((item, idx) => (
-              <div key={item.step} className={`fade-up stagger-${(idx % 3) + 1}`} style={{paddingTop:'32px',paddingBottom:'40px',borderTop:'1px solid rgba(255,255,255,0.1)'}}>
+              <div key={item.step} className={`fade-up stagger-${(idx % 3) + 1}`} style={{paddingTop:'32px',paddingBottom:'48px',borderTop:'1px solid rgba(255,255,255,0.1)'}}>
                 <span className="font-heading" style={{fontSize:'11px',letterSpacing:'0.2em',color:'#E85D4A',display:'block',marginBottom:'16px'}}>{item.step}</span>
-                <h4 className="heading" style={{fontSize:'clamp(1.2rem, 2.5vw, 1.5rem)',marginBottom:'16px',color:'white'}}>{item.title}</h4>
-                <div style={{width:'100%',height:'1px',backgroundColor:'rgba(255,255,255,0.12)',marginBottom:'16px'}} />
+                <h4 className="heading" style={{fontSize:'clamp(1.2rem, 2.5vw, 1.5rem)',marginBottom:'20px',color:'white'}}>{item.title}</h4>
+                <div style={{width:'100%',height:'1px',backgroundColor:'rgba(255,255,255,0.12)',marginBottom:'20px'}} />
                 <p style={{fontSize:'15px',lineHeight:1.85,color:'rgba(255,255,255,0.6)',fontWeight:300}}>{item.desc}</p>
               </div>
             ))}
           </div>
 
           {/* Method images */}
-          <div className="mt-16 md:mt-24 grid grid-cols-2 md:grid-cols-4 gap-3 fade-up">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 fade-up" style={{marginTop:'80px'}}>
             {["/images/img_008_12.jpeg", "/images/img_008_23.png", "/images/img_008_56.jpeg", "/images/img_008_65.jpeg"].map((img, i) => (
               <div key={i} className="relative aspect-[4/3] overflow-hidden">
                 <Image src={img} alt={`Method ${i + 1}`} fill className="object-cover opacity-50 hover:opacity-80 transition-opacity duration-500" sizes="320px" />
@@ -1217,15 +1216,15 @@ export default function Home() {
       {/* ─── PROCESS ─── */}
       <section id="process" className="section">
         <div className="container">
-          <div className="mb-16 md:mb-24 fade-up">
-            <p className="label label-accent mb-4">{t.processLabel}</p>
-            <h2 className="heading-impact" style={{fontSize:'clamp(2.5rem,6vw,5rem)',lineHeight:1.05}}>{t.processTitle}</h2>
+          <div className="fade-up" style={{marginBottom:'64px'}}>
+            <p className="label label-accent" style={{marginBottom:'16px'}}>{t.processLabel}</p>
+            <h2 className="heading-impact" style={{fontSize:'clamp(2.5rem,6vw,5rem)',lineHeight:0.95}}>{t.processTitle}</h2>
           </div>
 
           <div>
             {t.processPhases.map((phase, pi) => (
               <div key={phase.phase} className={`fade-up stagger-${pi + 1}`} style={{borderTop:'1px solid #EBEBEB',paddingTop:'40px',marginBottom: pi === 0 ? '80px' : '0'}}>
-                <span className="font-heading" style={{fontSize:'11px',letterSpacing:'0.2em',color:'#E85D4A',display:'block',marginBottom:'8px'}}>{phase.phase}</span>
+                <span className="font-heading" style={{fontSize:'11px',letterSpacing:'0.2em',color:'#E85D4A',display:'block',marginBottom:'16px'}}>{phase.phase}</span>
                 <h3 className="heading-impact" style={{fontSize:'clamp(2rem, 5vw, 3.5rem)',lineHeight:1,marginBottom:'24px'}}>{phase.title}</h3>
                 <p style={{fontSize:'16px',lineHeight:1.9,color:'#444',fontWeight:300,marginTop:'24px',maxWidth:'600px'}}>{phase.desc}</p>
               </div>
@@ -1233,7 +1232,7 @@ export default function Home() {
           </div>
 
           {/* Process image */}
-          <div className="mt-16 md:mt-24 fade-up">
+          <div className="fade-up" style={{marginTop:'80px'}}>
             <div className="relative aspect-[21/9] overflow-hidden img-cover">
               <Image src="/images/img_008_49.jpeg" alt="Work process" fill className="object-cover" />
             </div>
@@ -1250,7 +1249,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-20">
             {/* Left — big headline */}
             <div className="md:col-span-7 fade-up">
-              <p className="label label-accent mb-6">{t.contactLabel}</p>
+              <p className="label label-accent" style={{marginBottom:'16px'}}>{t.contactLabel}</p>
               <h2 className="heading-impact text-white whitespace-pre-line" style={{
                 fontSize:'clamp(3rem,8vw,7rem)',
                 lineHeight:1.15,
@@ -1262,9 +1261,9 @@ export default function Home() {
 
             {/* Right — contact info */}
             <div className="md:col-span-5 flex flex-col justify-end fade-up stagger-1">
-              <div className="space-y-10">
+              <div style={{display:'flex', flexDirection:'column', gap:'40px'}}>
                 <div>
-                  <p className="label text-white/30 mb-4">{t.contactGeneral}</p>
+                  <p className="label text-white/30" style={{marginBottom:'16px'}}>{t.contactGeneral}</p>
                   <a href="mailto:hello@theheartofmatter.com"
                     className="flex items-center gap-3 text-lg text-white hover:text-[#E85D4A] transition-colors group">
                     <IconMail />
@@ -1274,7 +1273,7 @@ export default function Home() {
                   </a>
                 </div>
                 <div>
-                  <p className="label text-white/30 mb-4">{t.contactProject}</p>
+                  <p className="label text-white/30" style={{marginBottom:'16px'}}>{t.contactProject}</p>
                   <a href="mailto:project@theheartofmatter.com"
                     className="flex items-center gap-3 text-lg text-white hover:text-[#E85D4A] transition-colors group">
                     <IconMail />
