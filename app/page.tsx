@@ -857,9 +857,9 @@ export default function Home() {
           {/* What Makes Us Different */}
           <div style={{marginTop:'100px'}} className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16">
             <div className="md:col-span-4 fade-up">
-              <p className="label label-accent">{t.aboutDiffLabel}</p>
-              <h3 className="heading whitespace-pre-line" style={{fontSize:'clamp(1.5rem, 3.5vw, 2.2rem)', marginBottom:'24px', lineHeight:1.2, marginTop:'4px'}}>{t.aboutDiffTitle}</h3>
-              <p className="body-text max-w-xl" style={{fontSize:'16px', lineHeight:'1.85'}}>{t.aboutDiffDesc}</p>
+              <p className="label label-accent" style={{fontSize:'13px'}}>{t.aboutDiffLabel}</p>
+              <h3 className="heading whitespace-pre-line" style={{fontSize:'clamp(1.7rem, 3.8vw, 2.4rem)', marginBottom:'24px', lineHeight:1.2, marginTop:'4px'}}>{t.aboutDiffTitle}</h3>
+              <p className="body-text max-w-xl" style={{fontSize:'18px', lineHeight:'1.85'}}>{t.aboutDiffDesc}</p>
             </div>
             <div className="md:col-span-8 fade-up stagger-1" style={{marginTop:'0px'}}>
               <div className="relative aspect-[16/9] overflow-hidden img-cover">
