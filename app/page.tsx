@@ -693,54 +693,56 @@ export default function Home() {
         </div>
 
         {/* Mobile menu overlay */}
-        {mobileMenuOpen && (
-          <div style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundColor: '#FFFFFF',
-            zIndex: 9999,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: '40px',
-          }}>
-            {/* 닫기 버튼 */}
-            <button
-              onClick={() => setMobileMenuOpen(false)}
-              style={{position:'absolute', top:'20px', right:'24px', background:'none', border:'none', cursor:'pointer', color:'#0A0A0A'}}
-            >
-              <IconClose />
-            </button>
-            {/* 로고 */}
-            <p style={{position:'absolute', top:'20px', left:'24px', fontFamily:'var(--font-heading)', fontSize:'11px', letterSpacing:'0.18em', color:'#0A0A0A', fontWeight:400}}>
-              THE HEART OF MATTER
-            </p>
-            {/* 메뉴 링크 */}
-            {navLinks.map(link => (
-              <a key={link.label} href={link.href} onClick={() => setMobileMenuOpen(false)}
-                style={{fontFamily:'var(--font-heading)', fontSize:'28px', letterSpacing:'-0.01em', color:'#0A0A0A', textDecoration:'none', fontWeight:300}}>
-                {link.label}
-              </a>
-            ))}
-            {/* 언어 토글 */}
-            <div style={{display:'flex', alignItems:'center', marginTop:'8px'}}>
-              {(['ko', 'en', 'ja'] as Lang[]).map((l, i) => (
-                <span key={l} style={{display:'flex', alignItems:'center'}}>
-                  {i > 0 && <span className="lang-sep">/</span>}
-                  <button onClick={() => { setLang(l); setMobileMenuOpen(false); }}
-                    className={`lang-btn${lang === l ? ' active' : ''}`}>
-                    {l === 'ko' ? '한' : l === 'en' ? 'EN' : '日'}
-                  </button>
-                </span>
-              ))}
-            </div>
-          </div>
-        )}
       </nav>
+
+      {/* ─── MOBILE MENU OVERLAY (nav 밖으로 꺼냄 — backdrop-blur stacking context 회피) ─── */}
+      {mobileMenuOpen && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: '#FFFFFF',
+          zIndex: 99999,
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: '36px',
+        }}>
+          {/* 로고 */}
+          <p style={{position:'absolute', top:'20px', left:'20px', fontFamily:'var(--font-heading)', fontSize:'11px', letterSpacing:'0.18em', color:'#0A0A0A', fontWeight:500, textTransform:'uppercase'}}>
+            THE HEART OF MATTER
+          </p>
+          {/* 닫기 버튼 */}
+          <button
+            onClick={() => setMobileMenuOpen(false)}
+            style={{position:'absolute', top:'18px', right:'20px', background:'none', border:'none', cursor:'pointer', color:'#0A0A0A', padding:'4px'}}
+          >
+            <IconClose />
+          </button>
+          {/* 메뉴 링크 */}
+          {navLinks.map(link => (
+            <a key={link.label} href={link.href} onClick={() => setMobileMenuOpen(false)}
+              style={{fontFamily:'var(--font-heading)', fontSize:'30px', letterSpacing:'-0.01em', color:'#0A0A0A', textDecoration:'none', fontWeight:300, lineHeight:1}}>
+              {link.label}
+            </a>
+          ))}
+          {/* 언어 토글 */}
+          <div style={{display:'flex', alignItems:'center', gap:'8px', marginTop:'4px'}}>
+            {(['ko', 'en', 'ja'] as Lang[]).map((l, i) => (
+              <span key={l} style={{display:'flex', alignItems:'center', gap:'8px'}}>
+                {i > 0 && <span style={{color:'#DDD', fontSize:'11px'}}>/</span>}
+                <button onClick={() => { setLang(l); setMobileMenuOpen(false); }}
+                  style={{background:'none', border:'none', cursor:'pointer', fontFamily:'var(--font-heading)', fontSize:'13px', letterSpacing:'0.08em', color: lang===l ? '#0A0A0A' : '#AAAAAA', fontWeight: lang===l ? 700 : 400, padding:'4px 2px'}}>
+                  {l === 'ko' ? '한' : l === 'en' ? 'EN' : '日'}
+                </button>
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* ─── HERO (fullscreen, editorial) ─── */}
       <section className="relative min-h-screen flex flex-col justify-end overflow-hidden">
