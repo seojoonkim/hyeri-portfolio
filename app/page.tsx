@@ -747,17 +747,13 @@ export default function Home() {
               </a>
             ))}
             {/* Language Toggle */}
-            <div className="flex items-center gap-0.5 ml-6">
+            <div className="flex items-center ml-6">
               {(["ko", "en", "ja"] as Lang[]).map((l, i) => (
                 <span key={l} className="flex items-center">
-                  {i > 0 && <span className="text-[#D0D0D0] text-[11px] mx-1">/</span>}
+                  {i > 0 && <span className="lang-sep">/</span>}
                   <button
                     onClick={() => setLang(l)}
-                    className={`text-[11px] tracking-wide transition-colors ${
-                      lang === l
-                        ? "text-[#0A0A0A] font-semibold"
-                        : "text-[#B0B0B0] hover:text-[#0A0A0A]"
-                    }`}
+                    className={`lang-btn${lang === l ? " active" : ""}`}
                   >
                     {l === "ko" ? "한" : l === "en" ? "EN" : "日"}
                   </button>
@@ -767,17 +763,13 @@ export default function Home() {
           </div>
           <div className="flex items-center gap-3 md:hidden">
             {/* Mobile Language Toggle */}
-            <div className="flex items-center gap-0.5">
+            <div className="flex items-center">
               {(["ko", "en", "ja"] as Lang[]).map((l, i) => (
                 <span key={l} className="flex items-center">
-                  {i > 0 && <span className="text-[#D0D0D0] text-[10px] mx-0.5">/</span>}
+                  {i > 0 && <span className="lang-sep">/</span>}
                   <button
                     onClick={() => setLang(l)}
-                    className={`text-[11px] tracking-wide transition-colors ${
-                      lang === l
-                        ? "text-[#0A0A0A] font-semibold"
-                        : "text-[#B0B0B0] hover:text-[#0A0A0A]"
-                    }`}
+                    className={`lang-btn${lang === l ? " active" : ""}`}
                   >
                     {l === "ko" ? "한" : l === "en" ? "EN" : "日"}
                   </button>
@@ -892,7 +884,7 @@ export default function Home() {
             {designerTags.map((tag) => (
               <span
                 key={tag}
-                className="inline-block text-[11px] tracking-[0.12em] uppercase bg-[#F0F0F0] text-[#555] px-3 py-1.5 rounded-full font-medium"
+                className="tag-pill"
               >
                 {tag}
               </span>
@@ -1042,7 +1034,7 @@ export default function Home() {
                   {project.category.split(" / ").map((cat) => (
                     <span
                       key={cat}
-                      className="text-[10px] tracking-[0.12em] uppercase bg-[#F5F5F5] text-[#6B6B6B] px-3 py-1 rounded-sm font-medium"
+                      className="tag-minimal"
                     >
                       {cat}
                     </span>
