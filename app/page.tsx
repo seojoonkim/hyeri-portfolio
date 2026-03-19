@@ -865,7 +865,7 @@ export default function Home() {
                 display:'block',
                 fontFamily:'var(--font-comfortaa), Noto Sans KR, sans-serif',
                 fontStyle:'normal',
-                fontWeight:900,
+                fontWeight:700,
                 fontSize:'var(--fs-7)',
                 lineHeight:1.0,
                 letterSpacing:'0.02em',
@@ -878,7 +878,7 @@ export default function Home() {
               <span className="hero-text-inner" style={{
                 fontFamily:'var(--font-comfortaa), Noto Sans KR, sans-serif',
                 fontStyle:'normal',
-                fontWeight:900,
+                fontWeight:700,
                 fontSize:'var(--fs-7)',
                 lineHeight:1.0,
                 letterSpacing:'0.06em',

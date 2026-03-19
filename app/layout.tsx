@@ -24,7 +24,7 @@ const dmSerif = DM_Serif_Display({
 const comfortaa = Noto_Sans_KR({
   subsets: ["latin"],
   variable: "--font-comfortaa",
-  weight: ["700", "900"],
+  weight: ["700"],
   style: ["normal"],
 });
 
