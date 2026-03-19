@@ -732,7 +732,7 @@ export default function Home() {
             : "bg-transparent"
         }`}
       >
-        <div className="max-w-[1200px] mx-auto px-5 md:px-12 lg:px-20 flex items-center justify-between h-16 md:h-20">
+        <div className="max-w-[1200px] mx-auto section-pad flex items-center justify-between h-16 md:h-20">
           <a href="#" className="font-heading text-lg tracking-tight font-semibold">
             THOM
           </a>
@@ -807,7 +807,7 @@ export default function Home() {
       </nav>
 
       {/* ─── HERO ─── */}
-      <section className="relative min-h-screen flex flex-col justify-end pb-16 md:pb-24 px-5 md:px-12 lg:px-20 overflow-hidden">
+      <section className="relative min-h-screen flex flex-col justify-end pb-16 md:pb-24 section-pad overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/img_008_48.jpeg"
@@ -854,7 +854,7 @@ export default function Home() {
       </section>
 
       {/* ─── DESIGNER PROFILE ─── */}
-      <section className="py-16 md:py-28 px-5 md:px-12 lg:px-20 bg-white">
+      <section className="py-16 md:py-28 section-pad bg-white">
         <div className="max-w-[1200px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
             {/* Left: Name & Title */}
@@ -898,7 +898,7 @@ export default function Home() {
       </section>
 
       {/* ─── ABOUT ─── */}
-      <section id="about" className="py-16 md:py-28 px-5 md:px-12 lg:px-20">
+      <section id="about" className="py-16 md:py-28 section-pad">
         <div className="max-w-[1200px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
             <div className="md:col-span-5 fade-in-up">
@@ -978,7 +978,7 @@ export default function Home() {
 
       {/* ─── SELECTED WORK ─── */}
       <section id="work" className="py-16 md:py-28 bg-[#F5F5F5]">
-        <div className="max-w-[1200px] mx-auto px-5 md:px-12 lg:px-20">
+        <div className="max-w-[1200px] mx-auto section-pad">
           <div className="flex items-end justify-between mb-10 md:mb-16">
             <div className="fade-in-up">
               <p className="text-[10px] tracking-[0.3em] uppercase text-[#E85D4A] mb-4">
@@ -1076,7 +1076,7 @@ export default function Home() {
       </section>
 
       {/* ─── SERVICES ─── */}
-      <section id="services" className="py-16 md:py-28 px-5 md:px-12 lg:px-20">
+      <section id="services" className="py-16 md:py-28 section-pad">
         <div className="max-w-[1200px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-10 md:mb-16">
             <div className="md:col-span-5 fade-in-up">
@@ -1124,7 +1124,7 @@ export default function Home() {
       </section>
 
       {/* ─── METHODOLOGY ─── */}
-      <section className="py-16 md:py-28 px-5 md:px-12 lg:px-20 bg-[#0A0A0A] text-white">
+      <section className="py-16 md:py-28 section-pad bg-[#0A0A0A] text-white">
         <div className="max-w-[1200px] mx-auto">
           <div className="mb-10 md:mb-16 fade-in-up">
             <p className="text-[10px] tracking-[0.3em] uppercase text-[#E85D4A] mb-4">
@@ -1157,7 +1157,7 @@ export default function Home() {
       </section>
 
       {/* ─── PROCESS ─── */}
-      <section id="process" className="py-16 md:py-28 px-5 md:px-12 lg:px-20">
+      <section id="process" className="py-16 md:py-28 section-pad">
         <div className="max-w-[1200px] mx-auto">
           <div className="mb-10 md:mb-16 fade-in-up">
             <p className="text-[10px] tracking-[0.3em] uppercase text-[#E85D4A] mb-4">
@@ -1209,7 +1209,7 @@ export default function Home() {
       </section>
 
       {/* ─── ALLIANCE ─── */}
-      <section className="py-16 md:py-28 px-5 md:px-12 lg:px-20 bg-[#F5F5F5]">
+      <section className="py-16 md:py-28 section-pad bg-[#F5F5F5]">
         <div className="max-w-[1200px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
             <div className="md:col-span-5 fade-in-up">
@@ -1238,7 +1238,7 @@ export default function Home() {
       </section>
 
       {/* ─── CONTACT ─── */}
-      <section id="contact" className="relative py-16 md:py-28 px-5 md:px-12 lg:px-20 bg-[#0A0A0A] text-white overflow-hidden">
+      <section id="contact" className="relative py-16 md:py-28 section-pad bg-[#0A0A0A] text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/img_008_00.jpeg"
@@ -1299,7 +1299,7 @@ export default function Home() {
       </section>
 
       {/* ─── FOOTER ─── */}
-      <footer className="py-8 px-5 md:px-12 lg:px-20 bg-[#0A0A0A] text-white border-t border-white/10">
+      <footer className="py-8 section-pad bg-[#0A0A0A] text-white border-t border-white/10">
         <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-white/30 tracking-[0.1em]">
             {t.footerCopy}
