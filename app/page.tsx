@@ -86,11 +86,13 @@ const content = {
         phase: "PHASE 1",
         title: "발견 & 전략",
         steps: ["— 클라이언트 요청", "— 클라이언트 미팅", "— 내부 기획", "— 제안", "— 클라이언트 확정", "— 실행"],
+        desc: "클라이언트의 요청에서 시작하여 미팅을 통해 아티스트의 현재 상태와 방향성을 깊이 이해합니다. 내부 기획과 전략적 제안을 거쳐 클라이언트의 확정을 받고, 구체적인 실행 계획을 수립합니다.",
       },
       {
         phase: "PHASE 2",
         title: "제작 & 딜리버리",
         steps: ["— 전략 분석", "— 프로젝트 컨셉팅", "— 프로듀싱 & 소싱", "— 비주얼 디렉팅", "— 콘텐츠 딜리버리", "— 릴리즈 디렉션"],
+        desc: "확정된 전략을 바탕으로 프로젝트 컨셉팅과 프로듀싱을 진행합니다. 비주얼 디렉팅을 통해 아티스트의 세계관을 시각 언어로 구현하고, 콘텐츠 딜리버리와 릴리즈 디렉션으로 완성된 경험을 세상에 선보입니다.",
       },
     ],
     services: [
@@ -181,11 +183,13 @@ const content = {
         phase: "PHASE 1",
         title: "Discovery & Strategy",
         steps: ["— Client Request", "— Client Meeting", "— Internal Planning", "— Proposal", "— Client Confirm", "— Execution"],
+        desc: "Beginning with the client's request, we engage in deep dialogue to understand the artist's current state and future direction. Through internal planning and strategic proposals, we align on vision before building a concrete execution roadmap.",
       },
       {
         phase: "PHASE 2",
         title: "Creation & Delivery",
         steps: ["— Strategy Analysis", "— Project Concepting", "— Producing & Sourcing", "— Visual Directing", "— Content Delivery", "— Release Direction"],
+        desc: "With strategy confirmed, we move into conceptual development and production. Visual direction brings the artist's world to life in image and form — culminating in content delivery and release direction that introduces a fully realized creative experience to the world.",
       },
     ],
     services: [
@@ -276,11 +280,13 @@ const content = {
         phase: "PHASE 1",
         title: "発見＆戦略",
         steps: ["— クライアントリクエスト", "— クライアントミーティング", "— 内部企画", "— 提案", "— クライアント確定", "— 実行"],
+        desc: "クライアントのリクエストから始まり、ミーティングを通じてアーティストの現状と方向性を深く理解します。内部企画と戦略的な提案を経て、クライアントの確認を得た後、具体的な実行計画を策定します。",
       },
       {
         phase: "PHASE 2",
         title: "制作＆デリバリー",
         steps: ["— 戦略分析", "— プロジェクトコンセプティング", "— プロデュース＆ソーシング", "— ビジュアルディレクティング", "— コンテンツデリバリー", "— リリースディレクション"],
+        desc: "確定した戦略を基に、プロジェクトのコンセプティングとプロデュースを進めます。ビジュアル・ディレクティングによってアーティストの世界観を視覚言語で具現化し、コンテンツデリバリーとリリースディレクションで完成した体験を世界に届けます。",
       },
     ],
     services: [
@@ -1089,13 +1095,13 @@ export default function Home() {
             <h2 className="heading-impact" style={{fontSize:'clamp(2.5rem,6vw,5rem)',lineHeight:0.95,color:'#fff'}}>{t.methodologyTitle}</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-12 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3" style={{gap:0}}>
             {t.methodology.map((item, idx) => (
-              <div key={item.step} className={`fade-up stagger-${idx + 1}`}>
-                <span className="font-heading text-[9px] tracking-[0.2em] text-[#E85D4A]">{item.step}</span>
-                <h4 className="heading text-lg text-white mt-4 mb-4">{item.title}</h4>
-                <div className="w-full h-px bg-white/10 mb-4" />
-                <p className="text-sm text-white/50 leading-relaxed font-light">{item.desc}</p>
+              <div key={item.step} className={`fade-up stagger-${(idx % 3) + 1}`} style={{paddingTop:'32px',paddingBottom:'40px',borderTop:'1px solid rgba(255,255,255,0.1)'}}>
+                <span className="font-heading" style={{fontSize:'11px',letterSpacing:'0.2em',color:'#E85D4A',display:'block',marginBottom:'16px'}}>{item.step}</span>
+                <h4 className="heading" style={{fontSize:'clamp(1.2rem, 2.5vw, 1.5rem)',marginBottom:'16px',color:'white'}}>{item.title}</h4>
+                <div style={{width:'100%',height:'1px',backgroundColor:'rgba(255,255,255,0.12)',marginBottom:'16px'}} />
+                <p style={{fontSize:'15px',lineHeight:1.85,color:'rgba(255,255,255,0.6)',fontWeight:300}}>{item.desc}</p>
               </div>
             ))}
           </div>
@@ -1119,24 +1125,12 @@ export default function Home() {
             <h2 className="heading-impact" style={{fontSize:'clamp(2.5rem,6vw,5rem)',lineHeight:0.95}}>{t.processTitle}</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
+          <div>
             {t.processPhases.map((phase, pi) => (
-              <div key={phase.phase} className={`fade-up stagger-${pi + 1}`}>
-                <div className="flex items-center gap-4 mb-8">
-                  <span className="label label-accent">{phase.phase}</span>
-                  <div className="flex-1 rule" />
-                </div>
-                <h3 className="heading text-2xl md:text-3xl mb-10">{phase.title}</h3>
-                <div className="space-y-6">
-                  {phase.steps.map((step, si) => (
-                    <div key={step} className="flex items-start gap-4 group">
-                      <span className="project-num mt-1 w-6">{String(si + 1).padStart(2, '0')}</span>
-                      <div className="flex-1 border-b border-[#D8D8D8] pb-5 group-hover:border-[#0A0A0A] transition-colors">
-                        <p className="body-text text-[#0A0A0A]">{step}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+              <div key={phase.phase} className={`fade-up stagger-${pi + 1}`} style={{borderTop:'1px solid #EBEBEB',paddingTop:'40px',marginBottom: pi === 0 ? '80px' : '0'}}>
+                <span className="font-heading" style={{fontSize:'11px',letterSpacing:'0.2em',color:'#E85D4A',display:'block',marginBottom:'8px'}}>{phase.phase}</span>
+                <h3 className="heading-impact" style={{fontSize:'clamp(2rem, 5vw, 3.5rem)',lineHeight:1,marginBottom:'24px'}}>{phase.title}</h3>
+                <p style={{fontSize:'16px',lineHeight:1.9,color:'#444',fontWeight:300,marginTop:'24px',maxWidth:'600px'}}>{phase.desc}</p>
               </div>
             ))}
           </div>
