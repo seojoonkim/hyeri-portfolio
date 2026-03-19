@@ -99,18 +99,22 @@ const content = {
       {
         title: "브랜드 전략",
         items: ["브랜드 진단", "브랜드 에센스", "가치 제안", "브랜드 포지셔닝", "커뮤니케이션 전략", "고객 경험 설계"],
+        desc: "아티스트의 본질에서 출발합니다. 브랜드 진단과 에센스 정의를 통해 흔들리지 않는 정체성의 중심을 세우고, 가치 제안과 포지셔닝 전략으로 시장 내 고유한 위치를 설계합니다. 커뮤니케이션 전략과 고객 경험 설계까지 이어지는 통합적 접근으로, 아티스트가 세상과 만나는 모든 접점을 하나의 언어로 묶습니다.",
       },
       {
         title: "크리에이티브 디렉션",
         items: ["아티스트 리딩", "내러티브 디자인", "미학적 번역", "릴리즈 플래닝", "비주얼 일관성 관리"],
+        desc: "아티스트를 깊이 읽는 것에서 시작합니다. 내러티브를 설계하고, 음악과 개념을 미학적 언어로 번역하며, 릴리즈 전 주기에 걸쳐 비주얼의 일관성을 지킵니다. 단편적인 시각물이 아닌, 아티스트의 세계관 전체를 관통하는 크리에이티브 디렉션을 제공합니다.",
       },
       {
         title: "비주얼 아이덴티티",
         items: ["로고 & 타이포그래피", "전용 서체 시스템", "그래픽 디자인", "에디토리얼 디자인", "이미저리 & 필름"],
+        desc: "아티스트의 정체성을 시각 언어로 번역합니다. 로고타입과 전용 서체 시스템부터 그래픽 디자인, 에디토리얼 레이아웃, 이미저리 & 필름까지 — 모든 비주얼 요소가 단 하나의 아이덴티티를 향해 수렴하도록 설계합니다.",
       },
       {
         title: "프로덕션",
         items: ["패키지 디자인", "캠페인 크리에이티브", "프로모션 콘텐츠", "MD 컨셉 & 실행", "스테이지 & 라이브 비주얼", "공간 기획"],
+        desc: "아이디어를 실체로 만듭니다. 앨범 패키지 디자인, 캠페인 크리에이티브, 프로모션 콘텐츠, MD 기획과 실행, 스테이지 비주얼, 공간 기획까지 — 팬이 아티스트를 직접 만지고 경험하는 모든 물리적·공간적 접점을 완성합니다.",
       },
     ],
     projectDescriptions: {
@@ -196,18 +200,22 @@ const content = {
       {
         title: "Brand Strategy",
         items: ["Brand Diagnosis", "Brand Essence", "Value Proposition", "Brand Positioning", "Communication Strategy", "Customer Experience Design"],
+        desc: "Everything begins with the artist's essence. Through brand diagnosis and essence definition, we establish an identity that doesn't waver — then build outward with positioning, communication strategy, and customer experience design. Every touchpoint where an artist meets their world is unified under a single, coherent language.",
       },
       {
         title: "Creative Direction",
         items: ["Artist Reading", "Narrative Design", "Aesthetic Translation", "Release Planning", "Visual Consistency Management"],
+        desc: "We begin by reading the artist deeply. Narratives are designed, music and concepts are translated into aesthetic language, and visual consistency is maintained across the full release cycle. What we deliver is not a collection of visuals, but a creative direction that runs through the entirety of an artist's world.",
       },
       {
         title: "Visual Identity",
         items: ["Logo & Typography", "Dedicated Type Systems", "Graphic Design", "Editorial Design", "Imagery & Film"],
+        desc: "We translate an artist's identity into visual language. From logotype and dedicated type systems to graphic design, editorial layouts, and imagery & film — every visual element is designed to converge toward a single identity.",
       },
       {
         title: "Production",
         items: ["Package Design", "Campaign Creative", "Promotion Content", "MD Concept & Execution", "Stage & Live Visual Direction", "Spatial Planning"],
+        desc: "We make ideas tangible. Album package design, campaign creative, promotional content, MD concepting and execution, stage visuals, spatial planning — we complete every physical and spatial touchpoint where fans directly encounter the artist.",
       },
     ],
     projectDescriptions: {
@@ -293,18 +301,22 @@ const content = {
       {
         title: "ブランド戦略",
         items: ["ブランド診断", "ブランドエッセンス", "バリュープロポジション", "ブランドポジショニング", "コミュニケーション戦略", "顧客体験設計"],
+        desc: "アーティストの本質から出発します。ブランド診断とエッセンス定義を通じて、揺るぎないアイデンティティの核を確立し、バリュープロポジションとポジショニング戦略で市場における独自の位置を設計します。コミュニケーション戦略から顧客体験設計まで続く統合的アプローチで、アーティストが世界と出会うすべての接点を一つの言語で結びます。",
       },
       {
         title: "クリエイティブディレクション",
         items: ["アーティストリーディング", "ナラティブデザイン", "美学的翻訳", "リリースプランニング", "ビジュアル一貫性管理"],
+        desc: "アーティストを深く読み解くことから始めます。ナラティブを設計し、音楽とコンセプトを美学的言語に翻訳し、リリース全サイクルにわたってビジュアルの一貫性を守ります。断片的なビジュアルではなく、アーティストの世界観全体を貫くクリエイティブ・ディレクションを提供します。",
       },
       {
         title: "ビジュアルアイデンティティ",
         items: ["ロゴ＆タイポグラフィ", "専用書体システム", "グラフィックデザイン", "エディトリアルデザイン", "イメージ＆フィルム"],
+        desc: "アーティストのアイデンティティをビジュアル言語に翻訳します。ロゴタイプと専用書体システムから、グラフィックデザイン、エディトリアルレイアウト、イメージ&フィルムまで — すべてのビジュアル要素が単一のアイデンティティへ収束するよう設計します。",
       },
       {
         title: "プロダクション",
         items: ["パッケージデザイン", "キャンペーンクリエイティブ", "プロモーションコンテンツ", "MDコンセプト＆実行", "ステージ＆ライブビジュアル", "空間企画"],
+        desc: "アイデアを実体にします。アルバムパッケージデザイン、キャンペーンクリエイティブ、プロモーションコンテンツ、MDの企画と実行、ステージビジュアル、空間企画まで — ファンがアーティストと直接触れ合うすべての物理的・空間的接点を完成させます。",
       },
     ],
     projectDescriptions: {
@@ -1104,30 +1116,13 @@ export default function Home() {
                   lineHeight:1.1,
                 }}>{service.title}</h3>
                 <div style={{width:'100%', height:'1px', background:'#E8E8E8', marginBottom:'24px'}} />
-                <ul style={{display:'flex', flexDirection:'column', gap:'12px', listStyle:'none', padding:0, margin:0}}>
-                  {service.items.map(item => (
-                    <li key={item} style={{
-                      display:'flex',
-                      alignItems:'baseline',
-                      gap:'10px',
-                      fontSize:'15px',
-                      lineHeight:'1.6',
-                      color:'#555',
-                      fontWeight:300,
-                    }}>
-                      <span style={{
-                        display:'inline-block',
-                        width:'4px',
-                        height:'4px',
-                        borderRadius:'50%',
-                        background:'#BBBBBB',
-                        flexShrink:0,
-                        marginTop:'6px',
-                      }} />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+                <p style={{
+                  fontSize: '15px',
+                  lineHeight: '1.85',
+                  color: '#555',
+                  fontWeight: 300,
+                  margin: 0,
+                }}>{service.desc}</p>
               </div>
             ))}
           </div>
