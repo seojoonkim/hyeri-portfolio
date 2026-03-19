@@ -835,7 +835,7 @@ export default function Home() {
           <div style={{opacity:0, animation:'fadeInUp 1s ease 0.2s forwards'}}>
             <p className="label" style={{color:'rgba(255,255,255,0.5)', marginBottom:'24px', fontSize:'12px'}}>{t.heroSubtitle}</p>
           </div>
-          <h1 style={{opacity:0, animation:'fadeInUp 1s ease 0.4s forwards'}}>
+          <h1 style={{opacity:0, animation:'fadeInUp 1s ease 0.4s forwards', textShadow:'0 0 80px rgba(255,255,255,0.08), 0 0 160px rgba(255,255,255,0.04)'}}>
             <span className="block" style={{
               fontFamily:'var(--font-impact)',
               fontStyle:'normal',
@@ -874,7 +874,7 @@ export default function Home() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 text-white/30" style={{animation:'fadeInUp 1s ease 1.2s both, bounce 2s ease 1.5s infinite'}}>
+        <div className="absolute bottom-8 left-1/2 z-10 text-white/30" style={{animation:'fadeInUp 1s ease 1.2s both, scrollPulse 2s ease-in-out 1.5s infinite'}}>
           <IconArrowDown />
         </div>
       </section>
