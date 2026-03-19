@@ -833,7 +833,7 @@ export default function Home() {
                 <p className="body-text" style={{fontSize:'16px', lineHeight:'1.9', color:'#333', fontWeight:'300'}}>{t.designerBio1}</p>
                 <p className="body-text" style={{fontSize:'16px', lineHeight:'1.9', color:'#444', fontWeight:'300'}}>{t.designerBio2}</p>
                 <p className="body-text" style={{fontSize:'16px', lineHeight:'1.9', color:'#444', fontWeight:'300'}}>{t.designerBio3}</p>
-                <p className="pull-quote" style={{fontSize:'17px', lineHeight:'1.8', color:'#0A0A0A', fontWeight:'500', fontStyle:'italic', marginTop:'12px', paddingTop:'20px', borderTop:'1px solid #EBEBEB'}}>{t.designerBio4}</p>
+                <p className="pull-quote" style={{fontSize:'17px', lineHeight:'1.8', color:'#0A0A0A', fontWeight:'600', fontStyle:'normal', marginTop:'12px', paddingTop:'20px', borderTop:'1px solid #EBEBEB'}}>{t.designerBio4}</p>
               </div>
             </div>
           </div>
@@ -995,12 +995,10 @@ export default function Home() {
               <p className="label label-accent">Vision</p>
             </div>
             <div className="md:col-span-10">
-              <h2 className="display" style={{
-                fontFamily:'var(--font-display)',
-                fontStyle:'italic',
-                fontSize:'clamp(2.5rem, 7vw, 6rem)',
+              <h2 className="heading-impact" style={{
+                fontSize:'clamp(2.8rem, 7vw, 6rem)',
                 lineHeight:0.95,
-                letterSpacing:'-0.02em',
+                letterSpacing:'0.02em',
                 color:'#0A0A0A',
                 marginBottom:'40px',
                 whiteSpace:'pre-line'
